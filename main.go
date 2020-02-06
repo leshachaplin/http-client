@@ -14,7 +14,7 @@ func main() {
 	fmt.Println("Hello client ...")
 
 	opts := grpc.WithInsecure()
-	cc, err := grpc.Dial("localhost:50051", opts, grpc.WithBlock())
+	cc, err := grpc.Dial(":50051", opts, grpc.WithBlock())
 	if err != nil {
 		log.Fatal(err)
 	}
